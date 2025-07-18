@@ -9,7 +9,7 @@
         }, delay);
     }
 
-    // Simulate daily events with increasing delays
+    // Daily Events
     addEvent("Woke up and got out of bed", 1000);
     addEvent("Opened emails and responded to urgent ones", 3000);
     addEvent("Got ready for the day", 5000);
@@ -18,4 +18,8 @@
     addEvent("Studied for IT certifications", 11000);
     addEvent("Came back home to rest", 13000);
     addEvent("Watched an episode of Kitchen Nightmares", 15000);
+    setTimeout(() => {
+        output.innerHTML += `<p>Opened 'Any.Run' to analyze phishing email malware behavior</p>`;
+    }, 7000);
+
 </script>
