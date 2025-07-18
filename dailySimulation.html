@@ -1,3 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>My Daily Schedule Simulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Patrick Hand', cursive;
+            text-align: center;
+            padding-top: 60px;
+            color: black;
+            background-image: url('https://images.pexels.com/photos/942872/pexels-photo-942872.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        #output {
+            background-color: rgba(255, 255, 255, 0.8);
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Simulated Day</h1>
+<div id="output" style="margin-top: 40px; font-size: 1.5rem;"></div>
+
 <script>
     const output = document.getElementById("output");
 
@@ -9,7 +41,7 @@
         }, delay);
     }
 
-    // Daily Events
+    // Daily Routine Events
     addEvent("Woke up and got out of bed", 1000);
     addEvent("Opened emails and responded to urgent ones", 3000);
     addEvent("Got ready for the day", 5000);
@@ -18,8 +50,14 @@
     addEvent("Studied for IT certifications", 11000);
     addEvent("Came back home to rest", 13000);
     addEvent("Watched an episode of Kitchen Nightmares", 15000);
-    setTimeout(() => {
-        output.innerHTML += `<p>Opened 'Any.Run' to analyze phishing email malware behavior</p>`;
-    }, 7000);
 
+    // Surprise Twist
+    setTimeout(() => {
+        const p = document.createElement("p");
+        p.innerHTML = "Opened <strong>'Any.Run'</strong> to analyze phishing email malware behavior.";
+        output.appendChild(p);
+    }, 17000);
 </script>
+
+</body>
+</html>
