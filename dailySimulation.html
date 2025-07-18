@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<script>
+    const output = document.getElementById("output");
 
-</body>
-</html>
+    function addEvent(text, delay) {
+        setTimeout(() => {
+            const p = document.createElement("p");
+            p.textContent = text;
+            output.appendChild(p);
+        }, delay);
+    }
+
+    // Simulate daily events with increasing delays
+    addEvent("Woke up and got out of bed", 1000);
+    addEvent("Opened emails and responded to urgent ones", 3000);
+    addEvent("Got ready for the day", 5000);
+    addEvent("Commute to school or work", 7000);
+    addEvent("Worked on assignments or tasks", 9000);
+    addEvent("Studied for IT certifications", 11000);
+    addEvent("Came back home to rest", 13000);
+    addEvent("Watched an episode of Kitchen Nightmares", 15000);
+</script>
